@@ -1,5 +1,5 @@
 ---
-- hosts: webserver,webserver1
+- hosts: webserver,webserver1,webserver2
   serial: 1
 
   vars:
