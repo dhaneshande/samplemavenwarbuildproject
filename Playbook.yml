@@ -104,7 +104,9 @@
      # become_method: sudo
 
     - name: delete repository
-      shell: sudo rm -rf /home/{{ansible_ssh_user}}/iTrust/iTrust-v23/
+      shell: rm -rf /home/{{ansible_ssh_user}}/iTrust
+      become: yes
+      become_method: sudo
 
     - name: Clone the iTrust repository
       shell: git clone https://github.com/dhaneshande/samplemavenwarbuildproject.git /home/{{ansible_ssh_user}}/iTrust/iTrust-v23/
