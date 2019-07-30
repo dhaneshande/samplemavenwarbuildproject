@@ -1,4 +1,4 @@
-# sparkjava-war-example
+# Ansible Playbook to install tomcat, Build the War and deploy warfile to Tomcat server
 Build war with maven using Ansible Playbook
 
  Tomcat will automatically deploy the war
