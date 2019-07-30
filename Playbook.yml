@@ -23,10 +23,15 @@
       become: yes
       become_method: sudo
 
-    - name: Add Oracle Java Repository
-      become: yes
-      apt_repository: repo='ppa:webupd8team/java'
-      become: yes
+    - name: Install Java 1.7
+      apt: name=default-jdk state=present
+
+    - name: add group "tomcat"
+      group: name=tomcat
+
+    - name: add user "tomcat"
+      user: name=tomcat group=tomcat home=/usr/share/tomcat createhome=no
+      become: True
       become_method: sudo
 
     - name: Accept Java 8 License
